@@ -13,7 +13,7 @@
 *.dex
 
 # Java class files
-*.class
+#*.class
 
 # Generated files
 bin/
@@ -108,7 +108,7 @@ output.json
 *.sig
 
 pkg/
-src/
+#src/
 
 ### JetBrains ###
 # Covers JetBrains IDEs: IntelliJ, RubyMine, PhpStorm, AppCode, PyCharm, CLion, Android Studio, WebStorm and Rider

@@ -1,0 +1,58 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 1,
+    "identityHash": "2f7e0d97884d85be6d2eca76897b276c",
+    "entities": [
+      {
+        "tableName": "drinkEntity",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`drinkId` TEXT NOT NULL, `drink_image` TEXT NOT NULL, `drink_name` TEXT NOT NULL, `drink_description` TEXT NOT NULL, `drink_has_alcohol` TEXT NOT NULL, PRIMARY KEY(`drinkId`))",
+        "fields": [
+          {
+            "fieldPath": "drinkId",
+            "columnName": "drinkId",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "image",
+            "columnName": "drink_image",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "name",
+            "columnName": "drink_name",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "description",
+            "columnName": "drink_description",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "hasAlcohol",
+            "columnName": "drink_has_alcohol",
+            "affinity": "TEXT",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "drinkId"
+          ],
+          "autoGenerate": false
+        },
+        "indices": [],
+        "foreignKeys": []
+      }
+    ],
+    "views": [],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '2f7e0d97884d85be6d2eca76897b276c')"
+    ]
+  }
+}
